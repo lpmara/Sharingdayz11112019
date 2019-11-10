@@ -1,0 +1,61 @@
+<div class="container">
+
+    <div #toolsbar="cdkDropList" cdkDropList cdkDropListSortingDisabled [cdkDropListConnectedTo]="dropZoneList" class="toolsbar">
+      <!-- <div cdkDrag id="froup-group-item" cdk-drag-placeholder (mousedown)="triggerDropZone('FORMGROUP')">
+        From Group
+        <div *cdkDragPreview class="input-preview">
+          <h3> Example Form Group </h3>
+          <div class="drop-zone"></div>
+        </div>
+      </div> -->
+      <div cdkDrag id="input-box-item" (mousedown)="triggerDropZone('INPUT')">
+        INPUT
+        <div *cdkDragPreview class="input-preview">
+          <label> INPUT BOX</label>
+          <input type="text">
+        </div>
+      </div>
+      <div cdkDrag id="input-box-item" (mousedown)="triggerDropZone('IMG')">
+        IMG
+        <div *cdkDragPreview class="input-preview">
+          <img src="https://d17fnq9dkz9hgj.cloudfront.net/uploads/2012/11/152964589-welcome-home-new-cat-632x475.jpg">
+        </div>
+      </div>
+      <div cdkDrag id="input-box-item" (mousedown)="triggerDropZone('TEXTAREA')">
+        TEXTAREA
+        <div *cdkDragPreview class="input-preview">
+          <label>TEXT AREA</label>
+          <textarea>
+            MUDA! MUDA! MUDA! MUDA! MUDA! MUDA! MUDA! MUDA!
+          </textarea>
+        </div>
+      </div>
+      <div cdkDrag id="input-box-item" (mousedown)="triggerDropZone('SELECT')">
+        SELECT
+        <div *cdkDragPreview class="input-preview">
+          <label>SELECT</label>
+          <select>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div  id="drawing-board" #Forms class="form-preview">
+
+      <div style="display: flex;position: absolute; top: 2%;left:4%; opacity: 0.2;">
+        <h1> TEST </h1>
+      </div>
+
+      <div id="drawing-board-drop-zone-1" class="form-drawing-board">
+        <div class="drop-zone-title">EXAMPLE DROP ZONE</div>
+        <div cdkDropList id="DropZone1" #DropZone1="cdkDropList" class="drop-zone" [cdkDropListConnectedTo]="[toolsbar]" (cdkDropListDropped)="dropToDropZone($event,'DropZone1')"></div>
+        <div cdkDropList id="DropZone2" #DropZone2="cdkDropList" class="drop-zone" [cdkDropListConnectedTo]="[toolsbar]" (cdkDropListDropped)="dropToDropZone($event,'DropZone2')"></div>
+        <div cdkDropList id="DropZone3" #DropZone3="cdkDropList" class="drop-zone" [cdkDropListConnectedTo]="[toolsbar]" (cdkDropListDropped)="dropToDropZone($event,'DropZone3')"></div>
+        <div cdkDropList id="DropZone4" #DropZone4="cdkDropList" class="drop-zone" [cdkDropListConnectedTo]="[toolsbar]" (cdkDropListDropped)="dropToDropZone($event,'DropZone4')"></div>
+      </div>
+
+    </div>
+</div>

@@ -1,0 +1,69 @@
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+}
+
+.toolsbar {
+  height: 100%;
+  width: 250px;
+  border: 1px solid #000;
+}
+
+.toolsbar div {
+  border: 1px solid #000;
+  margin: 10px;
+  padding: 5px 30px;
+  cursor: move;
+}
+
+.input-preview {
+  display: flex;
+  flex-flow: column;
+  height:auto;
+}
+
+.form-preview {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+  border: 1px solid #000;
+}
+
+.form-drawing-board {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  border: 1px solid red;
+  flex-flow:column;
+}
+
+.drop-zone {
+  margin: 15px auto;
+  display: flex;
+  border:2px dotted black;
+  background-color: blanchedalmond;
+  height: 50px;
+  width: 500px;
+}
+
+.dropped-zone {
+  margin: 15px auto;
+  display: flex;
+  background-color: #FFF;
+  height: auto;
+  width: 500px;
+}
+
+.drop-zone:hover {
+  background-color: burlywood
+}
+.drop-zone-title {
+  margin: 5px auto;
+  display: flex;
+  width: 500px;
+}
